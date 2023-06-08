@@ -1,11 +1,16 @@
 import * as React from "react"
 import { HeadFC, PageProps, graphql } from "gatsby"
+import styled from "styled-components"
+
+const MainWrapper = styled.div`
+  color: black;
+`
 
 const IndexPage = (props:PageProps<Queries.IndexPageQuery>) => {
   const { allContentfulBlog } = props.data
   const { edges } = allContentfulBlog
   return (
-    <main>
+    <MainWrapper>
       {edges.map((edge) => {
         return (
           <div>
@@ -13,7 +18,7 @@ const IndexPage = (props:PageProps<Queries.IndexPageQuery>) => {
           </div>
         )
       })}
-    </main>
+    </MainWrapper>
   )
 }
 
