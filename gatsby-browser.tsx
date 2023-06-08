@@ -6,8 +6,10 @@ import {
 } from '@xstyled/styled-components'
 import {
   theme,
+} from './src/theme'
+import {
   GlobalStyle
-} from './src/theme/'
+} from './src/GlobalStyle'
 
 export const wrapRootElement = ({ element }) => {
   return (

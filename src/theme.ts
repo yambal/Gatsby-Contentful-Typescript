@@ -7,7 +7,7 @@ export const theme = {
   ...defaultTheme,
   // Customize your theme here
 
-  //defaultColorModeName: 'dark',
+  defaultColorModeName: 'dark',
   colors: {
     primary: "#E398E6",
     darkBlue: "#2C1D3E",
