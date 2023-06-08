@@ -2,7 +2,7 @@ import type { GatsbyConfig } from "gatsby";
 
 const config: GatsbyConfig = {
   siteMetadata: {
-    title: `GatsbyContentfulTs`,
+    title: `Gatsby Contentful Ts`,
     siteUrl: `https://www.yourdomain.tld`
   },
   graphqlTypegen: true,
