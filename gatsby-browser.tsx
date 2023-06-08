@@ -5,11 +5,9 @@ import {
   ColorModeProvider
 } from '@xstyled/styled-components'
 import {
-  theme
-} from './src/theme/theme'
-import {
+  theme,
   GlobalStyle
-} from './src/theme/GlobalStyle'
+} from './src/theme/'
 
 export const wrapRootElement = ({ element }) => {
   return (
