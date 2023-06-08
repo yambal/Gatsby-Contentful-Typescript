@@ -12,13 +12,11 @@ import {
 export const wrapRootElement = ({ element }) => {
   return (
     <ThemeProvider theme={theme}>
-      <ColorModeProvider>
-        <>
-          <Preflight />
-          <GlobalStyle />
-          {element}
-        </>
-      </ColorModeProvider>
+      <>
+        <Preflight />
+        <GlobalStyle />
+        {element}
+      </>
     </ThemeProvider>
   )
 }
