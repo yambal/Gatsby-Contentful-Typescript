@@ -16,7 +16,11 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@mui/material": "^5.13.4",
     "gatsby": "^5.10.0",
+    "gatsby-plugin-emotion": "^8.10.0",
     "gatsby-plugin-image": "^3.10.0",
     "gatsby-plugin-sharp": "^5.10.0",
     "gatsby-source-contentful": "^8.10.0",
