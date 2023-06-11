@@ -5,6 +5,8 @@ import useSiteMetadata from "../hooks/useSiteMetadata"
 import { css } from "@emotion/react"
 import {} from '@emotion/react/types/css-prop'
 
+import Button from '@mui/material/Button';
+
 const IndexPage = (props:PageProps<Queries.IndexPageQuery>) => {
   const { title, siteUrl } = useSiteMetadata()
   const { allContentfulBlog } = props.data
@@ -17,6 +19,7 @@ const IndexPage = (props:PageProps<Queries.IndexPageQuery>) => {
   return (
     <div>
       <h1 css={underline}>{title}</h1>
+      <Button variant="contained">Hello World</Button>
       {edges.map((edge, i) => {
         return (  
           <div key={i}>
