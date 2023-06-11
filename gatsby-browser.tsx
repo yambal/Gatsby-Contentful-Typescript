@@ -2,7 +2,6 @@ import React from "react"
 import {
   ThemeProvider,
   Preflight,
-  ColorModeProvider
 } from '@xstyled/styled-components'
 import {
   theme,
