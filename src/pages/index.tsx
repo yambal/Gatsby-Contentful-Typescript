@@ -1,7 +1,6 @@
 import * as React from "react"
 import { PageProps, graphql } from "gatsby"
 import useSiteMetadata from "../hooks/useSiteMetadata"
-import { x } from "@xstyled/styled-components"
 
 const IndexPage = (props:PageProps<Queries.IndexPageQuery>) => {
   const { title, siteUrl } = useSiteMetadata()
@@ -9,8 +8,8 @@ const IndexPage = (props:PageProps<Queries.IndexPageQuery>) => {
   const { edges } = allContentfulBlog
 
   return (
-    <x.div>
-      <x.h1>{title}</x.h1>
+    <div>
+      <h1>{title}</h1>
       {edges.map((edge, i) => {
         return (  
           <div key={i}>
@@ -18,7 +17,7 @@ const IndexPage = (props:PageProps<Queries.IndexPageQuery>) => {
           </div>
         )
       })}
-    </x.div>
+    </div>
   )
 }
 
