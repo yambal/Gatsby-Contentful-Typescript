@@ -10,6 +10,8 @@ import Container from '@mui/material/Container'
 import Box from '@mui/material/Box'
 import Typography from '@mui/material/Typography';
 import { Header } from "../components/Header"
+import { ThemeProvider } from "@mui/material"
+import { theme } from '../theme/theme'
 
 const IndexPage = (props:PageProps<Queries.IndexPageQuery>) => {
   const { title, siteUrl } = useSiteMetadata()
@@ -21,7 +23,7 @@ const IndexPage = (props:PageProps<Queries.IndexPageQuery>) => {
   `
 
   return (
-    <>
+    <ThemeProvider theme={theme}>
       <Header />
       <Container maxWidth="sm">
         <Box sx={{ my: 4 }}>
@@ -38,7 +40,7 @@ const IndexPage = (props:PageProps<Queries.IndexPageQuery>) => {
         })}
         </Box>
       </Container>
-    </>
+    </ThemeProvider>
   )
 }
 
