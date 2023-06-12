@@ -9,6 +9,7 @@ import Button from '@mui/material/Button'
 import Container from '@mui/material/Container'
 import Box from '@mui/material/Box'
 import Typography from '@mui/material/Typography';
+import { Header } from "../components/Header"
 
 const IndexPage = (props:PageProps<Queries.IndexPageQuery>) => {
   const { title, siteUrl } = useSiteMetadata()
@@ -20,21 +21,24 @@ const IndexPage = (props:PageProps<Queries.IndexPageQuery>) => {
   `
 
   return (
-    <Container maxWidth="sm">
-      <Box sx={{ my: 4 }}>
-      <Typography variant="h4" component="h1" gutterBottom>
-        {title}
-      </Typography>
-      <Button variant="contained">Hello World</Button>
-      {edges.map((edge, i) => {
-        return (  
-          <div key={i}>
-            {edge.node.title}
-          </div>
-        )
-      })}
-      </Box>
-    </Container>
+    <>
+      <Header />
+      <Container maxWidth="sm">
+        <Box sx={{ my: 4 }}>
+        <Typography variant="h4" component="h1" gutterBottom>
+          {title}
+        </Typography>
+        <Button variant="contained">Hello World</Button>
+        {edges.map((edge, i) => {
+          return (  
+            <div key={i}>
+              {edge.node.title}
+            </div>
+          )
+        })}
+        </Box>
+      </Container>
+    </>
   )
 }
 
