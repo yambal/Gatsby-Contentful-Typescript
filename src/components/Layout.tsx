@@ -1,19 +1,16 @@
 import * as React from "react"
-import { PageProps, graphql } from "gatsby"
 import useSiteMetadata from "../hooks/useSiteMetadata"
 
-import { css } from "@emotion/react"
 import {} from '@emotion/react/types/css-prop'
-
 
 import Box from '@mui/material/Box'
 
 import { Header } from "../components/Header"
 import { Drawer } from "@mui/material"
 import { useDrawer } from '../hooks/useDrawer'
-import { Providers } from "../hooks/Providers"
+import { StyleProvider } from "../providers/StyleProvider"
 import Typography from '@mui/material/Typography'
-import { AppBar, IconButton, Toolbar } from "@mui/material"
+import { Toolbar } from "@mui/material"
 
 /**
  * Drawer
@@ -38,7 +35,7 @@ export const Layout = ({
   const { isOpen, toggle, close } = useDrawer()
 
   return (
-    <Providers>
+    <StyleProvider>
       <Box sx={{ display: 'flex'}}>
         <Header
           drawerWidth={drawerWidth}
@@ -94,6 +91,6 @@ export const Layout = ({
           {children}
         </Box>
       </Box>
-    </Providers>
+    </StyleProvider>
   )
 }
