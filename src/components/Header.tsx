@@ -2,25 +2,37 @@ import * as React from "react"
 
 import { AppBar, IconButton, Toolbar } from "@mui/material"
 import MenuIcon from '@mui/icons-material/Menu';
-import Typography from '@mui/material/Typography';
-import useSiteMetadata from "../hooks/useSiteMetadata";
 
-export const Header = () => {
-  const { title, siteUrl } = useSiteMetadata()
+type HeaderProps = {
+  headerTitle: React.ReactNode
+  drawerWidth: number
+  onMenuClick: () => void
+}
+
+export const Header = ({
+  headerTitle,
+  drawerWidth,
+  onMenuClick
+}: HeaderProps) => {
+  
   return (
-    <AppBar>
+    <AppBar
+      position="fixed"
+        sx={{
+          width: { sm: `calc(100% - ${drawerWidth}px)` },
+          ml: { sm: `${drawerWidth}px` },
+        }}
+      >
       <Toolbar>
-        <IconButton>
+        <IconButton
+          onClick={onMenuClick}
+          sx={{
+            display: { xs: 'block', sm: 'none' },
+          }}
+        >
           <MenuIcon />
         </IconButton>
-        <Typography
-            variant="h6"
-            noWrap
-            component="div"
-            sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
-          >
-            {title}
-        </Typography>
+        {headerTitle}
       </Toolbar>
     </AppBar>
   )

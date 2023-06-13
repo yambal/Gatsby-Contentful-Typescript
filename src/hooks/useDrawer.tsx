@@ -3,11 +3,13 @@ import * as React from "react"
 type DrawerState = {
   isOpen: boolean
   toggle: () => void
+  close: () => void
 }
 
 const defaultState:DrawerState = {
   isOpen: false,
   toggle: () => {},
+  close: () => {}
 }
 
 const DrawerContext = React.createContext(defaultState)
@@ -23,6 +25,9 @@ export const DrawerProvider = ({children}: DrawerProvider) => {
     isOpen,
     toggle: () => {
       setIsOpen(!isOpen)
+    },
+    close: () => {
+      setIsOpen(false)
     }
   }
 
