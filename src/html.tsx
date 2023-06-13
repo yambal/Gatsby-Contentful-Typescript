@@ -23,7 +23,7 @@ const HTML = (props: HTMLProps) => {
         {props.headComponents}
         <link rel="preconnect" href="https://fonts.googleapis.com"></link>
         <link rel="preconnect" href="https://fonts.gstatic.com"></link>
-        <link href="https://fonts.googleapis.com/css2?family=Kablammo&display=swap" rel="stylesheet"></link>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet"></link>
       </head>
       
       <body {...props.bodyAttributes}>
